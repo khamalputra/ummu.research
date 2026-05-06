@@ -430,14 +430,14 @@ canvas#bg{position:fixed;inset:0;z-index:0;opacity:.3}
         <div class="bar-row">
           <div class="bar-label">😐 Netral</div>
           <div class="bar-track">
-            <div class="bar-fill" id="bar-neu" style="background:linear-gradient(90deg,#64748b,#475569);width:10.5%;color:#fff">10.5%</div>
+            <div class="bar-fill" id="bar-neu" style="background:linear-gradient(90deg,#64748b,#475569);width:10.44%;color:#fff">10.44%</div>
           </div>
         </div>
       </div>
     </div>
     <div class="anim" style="margin-top:16px;display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:10px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3)">
       <span style="font-size:20px;animation:pulse 1s ease-in-out infinite">⚠️</span>
-      <p style="color:var(--red);font-size:14px"><strong>Masalah Utama:</strong> Ketidakseimbangan kelas yang signifikan, kelas netral hanya 10.5%</p>
+      <p style="color:var(--red);font-size:14px"><strong>Masalah Utama:</strong> Ketidakseimbangan kelas yang signifikan, kelas netral hanya 10.44%</p>
     </div>
   </div>
 </div>
@@ -499,9 +499,9 @@ canvas#bg{position:fixed;inset:0;z-index:0;opacity:.3}
         <div style="color:var(--muted);font-size:12px">Train : Test</div>
       </div>
       <div class="gc" style="text-align:center;padding:16px">
-        <div style="font-size:24px;margin-bottom:6px">🔁</div>
-        <div class="h3" style="font-size:13px">5-Fold CV</div>
-        <div style="color:var(--muted);font-size:12px">Cross Validation</div>
+        <div style="font-size:24px;margin-bottom:6px">🧬</div>
+        <div class="h3" style="font-size:13px">Stratified</div>
+        <div style="color:var(--muted);font-size:12px">Sampling Mode</div>
       </div>
     </div>
   </div>
@@ -516,10 +516,10 @@ canvas#bg{position:fixed;inset:0;z-index:0;opacity:.3}
       <div class="col anim">
         <div class="gc" style="border-color:rgba(0,245,255,.3)">
           <div class="h3" style="color:var(--cyan);margin-bottom:16px;text-align:center">📊 NLP Klasik</div>
-          <div class="step-card"><div class="step-icon" style="background:rgba(0,245,255,.1)">🧹</div><span>Cleaning & Normalisasi</span></div>
+          <div class="step-card"><div class="step-icon" style="background:rgba(0,245,255,.1)">🔠</div><span>Case Folding</span></div>
+          <div class="step-card"><div class="step-icon" style="background:rgba(0,245,255,.1)">🧹</div><span>Data Cleaning</span></div>
           <div class="step-card"><div class="step-icon" style="background:rgba(0,245,255,.1)">🗣️</div><span>Slang Normalization</span></div>
           <div class="step-card"><div class="step-icon" style="background:rgba(0,245,255,.1)">🚫</div><span>Stopword Removal</span></div>
-          <div class="step-card"><div class="step-icon" style="background:rgba(0,245,255,.1)">📐</div><span>Stemming</span></div>
           <div class="step-card" style="border-color:rgba(0,245,255,.4)"><div class="step-icon" style="background:rgba(0,245,255,.15)">🔢</div><strong style="color:var(--cyan)">TF-IDF Vectorization</strong></div>
           <div style="margin-top:12px;text-align:center">
             <div class="badge badge-cyan">Sparse Vector Matrix</div>
@@ -694,9 +694,14 @@ canvas#bg{position:fixed;inset:0;z-index:0;opacity:.3}
           </div>
         </div>
         <div class="gc anim">
-          <div class="h3" style="margin-bottom:12px">Formula McNemar</div>
-          <div class="formula">χ² = (|b − c| − 1)² / (b + c)</div>
-          <p style="font-size:12px;color:var(--muted);margin-top:10px;text-align:center">b = Model A benar, B salah · c = Model A salah, B benar</p>
+          <div class="h3" style="margin-bottom:12px">Exact Binomial Test</div>
+          <div class="formula" style="font-size:15px; padding: 18px 20px">
+            P = 2 &times; &sum;<sub>i=0</sub><sup>k</sup> C(n, i) &sdot; 0.5<sup>n</sup>
+          </div>
+          <p style="font-size:12px;color:var(--muted);margin-top:10px;text-align:center">n = b + c &nbsp;&middot;&nbsp; k = min(b, c)</p>
+          <div style="margin-top:12px; text-align:center">
+             <span class="badge badge-cyan" style="font-size:10px">Dietterich (1998) Methodology</span>
+          </div>
         </div>
       </div>
       <div class="anim">
@@ -724,57 +729,35 @@ canvas#bg{position:fixed;inset:0;z-index:0;opacity:.3}
   </div>
 </div>
 
-<!-- SLIDE 12 HASIL -->
+<!-- SLIDE 12 LUARAN -->
 <div class="slide" id="s12">
-  <div style="width:100%;max-width:900px">
+  <div style="width:100%;max-width:1050px">
     <div class="label anim" style="color:var(--cyan);margin-bottom:16px">SLIDE 12</div>
-    <h1 class="h1 anim glow" style="margin-bottom:8px">Hasil yang Diharapkan</h1>
-    <p class="anim" style="color:var(--muted);margin-bottom:28px">Expected outcome berdasarkan kajian literatur dan karakteristik model</p>
-    <div class="gc anim" style="padding:28px 32px;margin-bottom:20px">
-      <div class="h3" style="margin-bottom:20px;text-align:center">🏆 AI Model Leaderboard</div>
-      <div class="lb-row" style="border-color:rgba(0,245,255,.4);box-shadow:var(--glow)">
-        <div class="lb-rank" style="color:var(--cyan)">🥇</div>
-        <div style="min-width:120px"><div class="h3">IndoBERT</div><div class="badge badge-cyan" style="font-size:10px;margin-top:4px">Transformer</div></div>
-        <div class="lb-bar-track">
-          <div class="lb-bar" id="lb1" style="width:88%;background:linear-gradient(90deg,#00f5ff,#00c8e0)">Macro F1 ~0.88</div>
-        </div>
+    <h1 class="h1 anim glow" style="margin-bottom:8px">Luaran & Manfaat Penelitian</h1>
+    <p class="anim" style="color:var(--muted);margin-bottom:40px">Manfaat penelitian secara kualitatif berdasarkan BAB I §1.5</p>
+    
+    <div class="grid3 anim" style="gap:24px">
+      <div class="gc anim" style="padding:32px 24px; text-align:center; border-color:rgba(0,245,255,0.2)">
+        <div style="font-size:40px;margin-bottom:16px">🛠️</div>
+        <div class="h3" style="color:var(--cyan);margin-bottom:12px">Pipeline Terstandarisasi</div>
+        <p style="color:var(--muted);font-size:14px;line-height:1.6">Tersedianya pipeline klasifikasi sentimen Bahasa Indonesia yang terdokumentasi dan dapat direplikasi sepenuhnya.</p>
       </div>
-      <div class="lb-row anim">
-        <div class="lb-rank" style="color:var(--muted)">🥈</div>
-        <div style="min-width:120px"><div class="h3">SVM</div><div class="badge badge-cyan" style="font-size:10px;margin-top:4px">Traditional</div></div>
-        <div class="lb-bar-track">
-          <div class="lb-bar" id="lb2" style="width:72%;background:linear-gradient(90deg,#3b82f6,#1d4ed8)">Macro F1 ~0.72</div>
-        </div>
+      
+      <div class="gc anim" style="padding:32px 24px; text-align:center; border-color:rgba(124,58,237,0.3)">
+        <div style="font-size:40px;margin-bottom:16px">⚖️</div>
+        <div class="h3" style="color:var(--purple2);margin-bottom:12px">Rekomendasi Berbasis Bukti</div>
+        <p style="color:var(--muted);font-size:14px;line-height:1.6">Rekomendasi model NLP yang berlandaskan bukti statistik formal, bukan sekadar perbandingan nilai metrik mentah.</p>
       </div>
-      <div class="lb-row anim">
-        <div class="lb-rank" style="color:var(--dim)">🥉</div>
-        <div style="min-width:120px"><div class="h3">Naive Bayes</div><div class="badge badge-cyan" style="font-size:10px;margin-top:4px">Traditional</div></div>
-        <div class="lb-bar-track">
-          <div class="lb-bar" id="lb3" style="width:58%;background:linear-gradient(90deg,#64748b,#475569)">Macro F1 ~0.58</div>
-        </div>
+      
+      <div class="gc anim" style="padding:32px 24px; text-align:center; border-color:rgba(16,185,129,0.3)">
+        <div style="font-size:40px;margin-bottom:16px">📊</div>
+        <div class="h3" style="color:var(--green);margin-bottom:12px">Kerangka Evaluasi Baru</div>
+        <p style="color:var(--muted);font-size:14px;line-height:1.6">Framework evaluasi berbasis Macro F1 dan Uji McNemar yang dapat diadopsi oleh penelitian NLP sejenis di masa depan.</p>
       </div>
     </div>
-    <div class="grid4 anim">
-      <div class="gc" style="text-align:center;padding:16px;border-color:rgba(0,245,255,.2)">
-        <div style="font-size:22px;margin-bottom:6px">🧠</div>
-        <div style="font-size:12px;color:var(--cyan);font-weight:600">IndoBERT Unggul</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px">Contextual understanding terbaik</div>
-      </div>
-      <div class="gc" style="text-align:center;padding:16px;border-color:rgba(0,245,255,.2)">
-        <div style="font-size:22px;margin-bottom:6px">⚔️</div>
-        <div style="font-size:12px;color:var(--cyan);font-weight:600">SVM Kompetitif</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px">Tetap relevan dengan efisien</div>
-      </div>
-      <div class="gc" style="text-align:center;padding:16px;border-color:rgba(0,245,255,.2)">
-        <div style="font-size:22px;margin-bottom:6px">👑</div>
-        <div style="font-size:12px;color:var(--cyan);font-weight:600">Macro F1 Representatif</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px">Metrik yang lebih adil</div>
-      </div>
-      <div class="gc" style="text-align:center;padding:16px;border-color:rgba(0,245,255,.2)">
-        <div style="font-size:22px;margin-bottom:6px">🧪</div>
-        <div style="font-size:12px;color:var(--cyan);font-weight:600">McNemar Valid</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px">Validasi statistik ilmiah</div>
-      </div>
+
+    <div class="anim" style="margin-top:40px; padding:20px; border-radius:12px; background:rgba(255,255,255,0.03); border:1px solid var(--border); text-align:center">
+      <p style="color:var(--muted); font-size:15px; font-style:italic">"Menghasilkan kontribusi nyata bagi pengembangan sistem pemrosesan teks Bahasa Indonesia yang lebih ilmiah."</p>
     </div>
   </div>
 </div>
